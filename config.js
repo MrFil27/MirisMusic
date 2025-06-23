@@ -1,6 +1,6 @@
 module.exports = {
   TOKEN: "",
-  language: "en",
+  language: "it",
   ownerID: ["1004206704994566164", ""], 
   mongodbUri : "mongodb+srv://MirisMusic:HincFilo_004@cluster0.gcs0vsg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
   spotifyClientId : "",
