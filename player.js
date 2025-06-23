@@ -98,17 +98,17 @@ function initializePlayer(client) {
             const attachment = new AttachmentBuilder(cardPath, { name: 'musicard.png' });
             const embed = new EmbedBuilder()
             .setAuthor({ 
-                name: 'Playing Song..', 
+                name: 'Brano in riproduzione...', 
                 iconURL: musicIcons.playerIcon,
                 url: config.SupportServer
             })
-            .setFooter({ text: `Developed by SSRR | Prime Music v1.2`, iconURL: musicIcons.heartIcon })
+            .setFooter({ text: `Developed by MrFil_27 | Miri la cantante`, iconURL: musicIcons.heartIcon })
             .setTimestamp()
             .setDescription(  
                 `- **Titolo:** [${track.info.title}](${track.info.uri})\n` +
-                `- **Autore:** ${track.info.author || 'Unknown Artist'}\n` +
-                `- **Dirata:** ${formatDuration(track.info.length)}\n` +
-                `- **Richiesto da:** ${requester}\n` +
+                `- **Autore:** ${track.info.author || 'Artista sconosciuto'}\n` +
+                `- **Durata:** ${formatDuration(track.info.length)}\n` +
+                `- **Richiesta:** ${requester}\n` +
                 `- **Fonte:** ${track.info.sourceName}\n` + '**- Controlli :**\n 🔁 `Ripeti`, ❌ `Disattiva`, ⏭️ `Salta`, 🎤 `Lyrics`, 🗑️ `Pulisci`\n ⏹️ `Arresta`, ⏸️ `Pausa`, ▶️ `Continua`, 🔊 `Vol +`, 🔉 `Vol -`')
             .setImage('attachment://musicard.png')
             .setColor('#FF7A00');
