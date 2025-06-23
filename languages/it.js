@@ -123,41 +123,41 @@ module.exports = {
   myplaylists: {
     embed: {
         noPlaylistsFound: "Nessuna playlist trovata",
-        noPlaylistsFoundDescription: "- You have not created any playlists.",
-        yourPlaylistsTitle: "Your Playlists (Page {currentPage}/{totalPages})",
-        visibility: "Visibility",
-        private: "Private",
-        public: "Public",
+        noPlaylistsFoundDescription: "- Non hai alcuna playlist creata.",
+        yourPlaylistsTitle: "Le tue playlist (Pagina {currentPage}/{totalPages})",
+        visibility: "Visibilità",
+        private: "Privato",
+        public: "Pubblico",
         server: "Server",
-        songs: "Songs",
-        error: "Error",
-        errorDescription: "- An error occurred while fetching your playlists."
+        songs: "Brani",
+        error: "Errore",
+        errorDescription: "- Si è verificato un errore durante il recupero delle playlist."
     }
   },
   nowPlaying: {
     embed: {
-        error: "Error",
-        noSong: "- There is no song currently playing.",
-        nowPlaying: "Now Playing!",
-        errorDescription: "- An error occurred while processing your request."
+        error: "Errore",
+        noSong: "- Non ci sono brani in riproduzione.",
+        nowPlaying: "In riproduzione!",
+        errorDescription: "- Si è verificato un errore durante l'elaborazione della richiesta."
     }
   },
   pause: {
     embed: {
-        error: "Error",
-        noActivePlayer: "- No active player found.",
+        error: "Errore",
+        noActivePlayer: "- Nessun utente attivo trovato.",
         paused: "Paused!",
-        pausedDescription: "**- Playback has been paused!**",
-        errorDescription: "- An error occurred while processing your request."
+        pausedDescription: "**- La riproduzione è stata messa in pausa!**",
+        errorDescription: "- Si è verificato un errore durante l'elaborazione della richiesta."
     }
   },
   play: {
     embed: {
-        error: "Error",
-        noVoiceChannel: "- You need to be in a voice channel to use this command.",
-        noLavalinkNodes: "- No available Lavalink nodes to process the request.",
-        noResults: "- No results found.",
-        requestUpdated: "Request Updated!",
+        error: "Errore",
+        noVoiceChannel: "- Devi connetterti in un canale vocale per eseguirequestocomando.",
+        noLavalinkNodes: "- Nessun 'node Lavalink' disponibile per elaborare la richiesta.",
+        noResults: "- Nessun risultato trovato.",
+        requestUpdated: "Richiesta aggiornata!",
         successProcessed: "- Your request has been successfully processed.\n- Please use buttons to control playback",
         errorProcessing: "- An error occurred while processing your request."
     },
