@@ -66,7 +66,7 @@ async function nowPlaying(client, interaction, lang) {
 
 module.exports = {
     name: "np",
-    description: "Displays the currently playing song with a progress bar",
+    description: "Visualizza il brano attualmente in riproduzione con una barra di avanzamento",
     permissions: "0x0000000000000800",
     options: [],
     run: nowPlaying,
