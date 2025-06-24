@@ -147,7 +147,7 @@ module.exports = {
     options: [
         {
             name: 'name',
-            description: 'Enter playlist name',
+            description: 'Inserisci il nome della playlist',
             type: ApplicationCommandOptionType.String,
             required: true
         }
