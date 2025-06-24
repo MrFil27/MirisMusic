@@ -96,7 +96,7 @@ module.exports = {
         },
         {
             name: 'input',
-            description: 'Inserisci il nome del brano o l'URL',
+            description: 'Inserisci il nome del brano o l\'URL',
             type: ApplicationCommandOptionType.String,
             required: true
         }
