@@ -21,6 +21,10 @@ client.on("ready", () => {
     console.log(`${colors.cyan}[ MUSIC ]${colors.reset} ${colors.green}Riffy Music System Ready 🎵${colors.reset}`);
     console.log(`${colors.cyan}[ TIME ]${colors.reset} ${colors.gray}${new Date().toISOString().replace('T', ' ').split('.')[0]}${colors.reset}`);
     client.riffy.init(client.user.id);
+
+    setInterval(() => {
+        console.log(`${colors.cyan}[ KEEPALIVE ]${colors.reset} Ping di mantenimento attivo...`);
+    }, 5000);
 });
 client.config = config;
 
