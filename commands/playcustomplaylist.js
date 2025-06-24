@@ -13,8 +13,7 @@ async function playCustomPlaylist(client, interaction, lang) {
                 .setColor('#ff0000')
                 .setAuthor({ 
                     name: lang.playCustomPlaylist.embed.error, 
-                    iconURL: musicIcons.alertIcon,
-                    url: config.SupportServer
+                    iconURL: musicIcons.alertIcon
                 })
                 .setFooter({ text: lang.footer, iconURL: musicIcons.heartIcon })
                 .setDescription(lang.playCustomPlaylist.embed.noVoiceChannel);
@@ -29,8 +28,7 @@ async function playCustomPlaylist(client, interaction, lang) {
                 .setColor('#ff0000')
                 .setAuthor({ 
                     name: lang.playCustomPlaylist.embed.error, 
-                    iconURL: musicIcons.alertIcon,
-                    url: config.SupportServer
+                    iconURL: musicIcons.alertIcon
                 })
                 .setFooter({ text: lang.footer, iconURL: musicIcons.heartIcon })
                 .setDescription(lang.playCustomPlaylist.embed.playlistNotFound);
@@ -44,8 +42,7 @@ async function playCustomPlaylist(client, interaction, lang) {
                 .setColor('#ff0000')
                 .setAuthor({ 
                     name: lang.playCustomPlaylist.embed.accessDenied, 
-                    iconURL: musicIcons.alertIcon,
-                    url: config.SupportServer
+                    iconURL: musicIcons.alertIcon
                 })
                 .setFooter({ text: lang.footer, iconURL: musicIcons.heartIcon })
                 .setDescription(lang.playCustomPlaylist.embed.noPermission);
@@ -59,8 +56,7 @@ async function playCustomPlaylist(client, interaction, lang) {
                 .setColor('#ff0000')
                 .setAuthor({ 
                     name: lang.playCustomPlaylist.embed.error, 
-                    iconURL: musicIcons.alertIcon,
-                    url: config.SupportServer
+                    iconURL: musicIcons.alertIcon
                 })
                 .setFooter({ text: lang.footer, iconURL: musicIcons.heartIcon })
                 .setDescription(lang.playCustomPlaylist.embed.emptyPlaylist);
@@ -95,8 +91,7 @@ async function playCustomPlaylist(client, interaction, lang) {
                     .setColor(config.embedColor)
                     .setAuthor({ 
                         name: lang.playCustomPlaylist.embed.error, 
-                        iconURL: musicIcons.alertIcon,
-                        url: config.SupportServer
+                        iconURL: musicIcons.alertIcon
                     })
                     .setFooter({ text: lang.footer, iconURL: musicIcons.heartIcon })
                     .setDescription(lang.playCustomPlaylist.embed.errorResolvingSong);
@@ -112,8 +107,7 @@ async function playCustomPlaylist(client, interaction, lang) {
             .setColor(config.embedColor)
             .setAuthor({
                 name: lang.playCustomPlaylist.embed.playingPlaylist,
-                iconURL: musicIcons.beats2Icon,
-                url: config.SupportServer
+                iconURL: musicIcons.beats2Icon
             })
             .setDescription(lang.playCustomPlaylist.embed.playlistPlaying.replace("{playlistName}", playlistName))
             .setFooter({ text: lang.footer, iconURL: musicIcons.heartIcon });
@@ -126,8 +120,7 @@ async function playCustomPlaylist(client, interaction, lang) {
             .setColor('#ff0000')
             .setAuthor({ 
                 name: lang.playCustomPlaylist.embed.error, 
-                iconURL: musicIcons.alertIcon,
-                url: config.SupportServer
+                iconURL: musicIcons.alertIcon
             })
             .setFooter({ text: lang.footer, iconURL: musicIcons.heartIcon })
             .setDescription(lang.playCustomPlaylist.embed.errorPlayingPlaylist);
