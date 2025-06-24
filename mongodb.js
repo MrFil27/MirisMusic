@@ -7,7 +7,10 @@ let client;
 
 if (config.mongodbUri) {
     const uri = config.mongodbUri;
-    client = new MongoClient(uri);
+    client = new MongoClient(uri, {
+        tls: true,
+        ssl: true,
+    });
 } else {
     console.warn("\x1b[33m[ WARNING ]\x1b[0m MongoDB URI is not defined in the configuration.");
 }
