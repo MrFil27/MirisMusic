@@ -158,121 +158,121 @@ module.exports = {
         noLavalinkNodes: "- Nessun 'node Lavalink' disponibile per elaborare la richiesta.",
         noResults: "- Nessun risultato trovato.",
         requestUpdated: "Richiesta aggiornata!",
-        successProcessed: "- Your request has been successfully processed.\n- Please use buttons to control playback",
-        errorProcessing: "- An error occurred while processing your request."
+        successProcessed: "- La tua richiesta è stata elaborata con successo.\n- Utilizza i pulsanti per controllare la riproduzione",
+        errorProcessing: "- Si è verificato un errore durante l'elaborazione della richiesta."
     },
-    commandDescription: "Enter song name / link or playlist"
+    commandDescription: "Inserisci il nome/link del brano o della playlist"
   },
   playCustomPlaylist: {
     embed: {
-        error: "Error",
-        noVoiceChannel: "- You need to be in a voice channel to use this command.",
-        playlistNotFound: "- Playlist not found.",
-        accessDenied: "Access Denied",
-        noPermission: "- You do not have permission to play this private playlist.",
-        emptyPlaylist: "- The playlist is empty.",
-        playingPlaylist: "Playing Playlist!",
-        playlistPlaying: "- Playlist **{playlistName}** is now playing.\n- Please use buttons to control playback",
-        errorResolvingSong: "- Error resolving song.",
-        errorPlayingPlaylist: "- An error occurred while playing the playlist."
+        error: "Errore",
+        noVoiceChannel: "- Devi connetterti in un canale vocale per utilizzare questo comando.",
+        playlistNotFound: "- Playlist non trovata.",
+        accessDenied: "Accesso negato",
+        noPermission: "- Non hai il permesso di esequire questo comando.",
+        emptyPlaylist: "- La playlist è vuota.",
+        playingPlaylist: "Riproduzione della playlist!",
+        playlistPlaying: "- La playlist **{playlistName}** è in riproduzione.\n- Utilizza i pulsanti per controllare la riproduzione",
+        errorResolvingSong: "- Errore durante la risoluzione del brano.",
+        errorPlayingPlaylist: "- Si è verificato un errore durante la riproduzione della playlist."
     },
-    commandDescription: "Enter playlist name"
+    commandDescription: "Inserisci il nome della playlist"
   },
   queue: {
     embed: {
-        queueEmpty: "Queue is Empty",
-        queueEmptyDescription: "- The queue is currently empty. Add songs using the `/play` command.",
-        currentQueue: "Current Queue",
-        noMoreSongs: "- No more songs in the queue.",
-        error: "Error",
-        errorDescription: "- An error occurred while retrieving the queue."
+        queueEmpty: "La coda è vuota",
+        queueEmptyDescription: "- La coda è attualmente vuota. Aggiungi brani usando il comando `/play`.",
+        currentQueue: "Coda corrente",
+        noMoreSongs: "- Non ci sono più canzoni in coda.",
+        error: "Errore",
+        errorDescription: "- Si è verificato un errore durante il recupero della coda."
     }
   },
   remove: {
     embed: {
-        queueEmpty: "Queue is Empty",
-        queueEmptyDescription: "- The queue is currently empty. Add songs using the `/play` command.",
-        invalidPosition: "Error",
-        invalidPositionDescription: "- Invalid position. Enter a number between 1 and {queueLength}.",
-        songRemoved: "Song Removed",
-        songRemovedDescription: "- Removed song: **{songTitle}** from the queue.",
-        error: "Error",
-        errorDescription: "- An error occurred while removing the song from the queue."
+        queueEmpty: "La coda è vuota",
+        queueEmptyDescription: "- La coda è attualmente vuota. Aggiungi brani usando il comando `/play`.",
+        invalidPosition: "Errore",
+        invalidPositionDescription: "- Posizione non valida. Inserisci un numero compreso tra 1 e {queueLength}.",
+        songRemoved: "Brano rimosso",
+        songRemovedDescription: "- Il brano **{songTitle}** è stato rimosso dalla coda.",
+        error: "Errore",
+        errorDescription: "- Si è verificato un errore durante la rimozione del brano."
     }
   },
   resume: {
     embed: {
-        noActivePlayer: "Error",
-        noActivePlayerDescription: "- No active player found.",
-        resumed: "Resumed!",
-        resumedDescription: "**- Playback has been resumed!**",
-        error: "Error",
-        errorDescription: "- An error occurred while processing your request."
+        noActivePlayer: "Errore",
+        noActivePlayerDescription: "- Nessun utente attivo trovato",
+        resumed: "Ripresa!",
+        resumedDescription: "**- La riproduzione è ripresa!**",
+        error: "Errore",
+        errorDescription: "- Si è verificato un errore durante l'elaborazione della richiesta."
     }
   },
   showsongs: {
     embed: {
-        error: "Error",
-        playlistNotFound: "- Playlist not found.",
-        accessDenied: "Access Denied",
-        noPermission: "- You do not have permission to view this private playlist.",
-        noSongs: "- No songs in this playlist.",
-        songsInPlaylist: "Songs in {playlistName}",
-        songsInPlaylistPage: "Songs in {playlistName} (Page {currentPage}/{totalPages})",
-        errorDescription: "- An error occurred while showing the songs."
+        error: "Errore",
+        playlistNotFound: "- Playlist non trovata.",
+        accessDenied: "Accesso negato",
+        noPermission: "- Nonb hai il permesso di esequire questo comando.",
+        noSongs: "- Non ci sono brani nella playlsit.",
+        songsInPlaylist: "Brani in {playlistName}",
+        songsInPlaylistPage: "Brani in {playlistName} (Pagina {currentPage}/{totalPages})",
+        errorDescription: "- Si è verificato un errore durante la visualizzazione dei brani."
     }
   },
   shuffle: {
     embed: {
-        queueEmpty: "Queue is Empty",
-        queueEmptyDescription: "- The queue is currently empty. Add songs using the `/play` command.",
-        queueShuffled: "Queue Shuffled",
-        queueShuffledDescription: "- The queue has been shuffled successfully.",
-        error: "Error",
-        errorDescription: "- An error occurred while shuffling the queue."
+        queueEmpty: "la coda è vuota",
+        queueEmptyDescription: "- La coda è attualmente vuota. Aggiungi brani usando il comando `/play`.",
+        queueShuffled: "Coda mischiata",
+        queueShuffledDescription: "- La coda è stata spostata correttamente.",
+        error: "Errore",
+        errorDescription: "- Si è verificato un errore durante la riproduzione casuale della coda."
     }
   },
   skip: {
     embed: {
-        noActivePlayer: "Error",
-        noActivePlayerDescription: "- No active player found.",
-        songSkipped: "Song Skipped!",
-        songSkippedDescription: "**- Player will play the next song!**",
-        error: "Error",
-        errorDescription: "- An error occurred while processing your request."
+        noActivePlayer: "Errore",
+        noActivePlayerDescription: "- Nessun utente attivo trovato.",
+        songSkipped: "Brano saltato!",
+        songSkippedDescription: "**- Il lettore riprodurrà la canzone successiva!**",
+        error: "Errore",
+        errorDescription: "- Si è verificato un errore durante l'elaborazione della richiesta."
     }
   },
   stop: {
     embed: {
-        noActivePlayer: "Error",
-        noActivePlayerDescription: "- No active player found.",
-        musicHalted: "Music Halted!",
-        musicHaltedDescription: "**- Playback has been stopped and player destroyed!**",
-        error: "Error",
-        errorDescription: "- An error occurred while processing your request."
+        noActivePlayer: "Errore",
+        noActivePlayerDescription: "- Nessun utente attivo trovato.",
+        musicHalted: "Brano interrotto!",
+        musicHaltedDescription: "**- La riproduzione è stata interrotta e il lettore è stato distrutto!**",
+        error: "Errore",
+        errorDescription: "- Si è verificato un errore durante l'elaborazione della richiesta."
     }
   },
   support: {
     embed: {
-        authorName: "Support Server",
-        description: "➡️ **Join our Discord server for support and updates:**\n- Discord - {supportServerLink}\n\n➡️ **Follow us on:**\n- GitHub - {githubLink}\n- Replit - {replitLink}\n- YouTube - {youtubeLink}",
-        error: "Error",
-        errorDescription: "- An error occurred while processing your request."
+        authorName: "Supporto",
+        description: "",
+        error: "Errore",
+        errorDescription: "- Si è verificato un errore durante l'elaborazione della richiesta."
     }
   },
   volume: {
     embed: {
-        noActivePlayer: "Error",
-        noActivePlayerDescription: "- No active player found.",
-        volumeUpdated: "Volume Updated!",
-        volumeUpdatedDescription: "- Volume has been set to **{volume}%**",
-        error: "Error",
-        errorDescription: "An error occurred while setting the volume."
+        noActivePlayer: "Errore",
+        noActivePlayerDescription: "- Nessun utente attivo trovato.",
+        volumeUpdated: "Volume aggiornato!",
+        volumeUpdatedDescription: "- Il volume è stato impostato a **{volume}%**",
+        error: "Errore",
+        errorDescription: "Si è verificato un errore durante l'elaborazione della richiesta."
     },
-    volumeRangeError: "Volume level must be between 0 and 100."
+    volumeRangeError: "Il livello del volume deve essere compreso tra 0 e 100."
   },
     errors: {
-      noPermission: "You don't have permission to use this command.",
-      generalError: "- Error: {error}"
+      noPermission: "Non hai il permesso di eseguire questo comando.",
+      generalError: "- Errore: {error}"
     }
   };
