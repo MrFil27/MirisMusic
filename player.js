@@ -29,10 +29,10 @@ async function sendMessageWithPermissionsCheck(channel, embed, attachment, actio
         });
         return message;
     } catch (error) {
-        console.error("Error sending message:", error.message);
+        console.error("Errore durante l'invio del messaggio:", error.message);
         const errorEmbed = new EmbedBuilder()
             .setColor('#FF0000')
-            .setDescription("⚠️ **Unable to send message. Check bot permissions.**");
+            .setDescription("⚠️ **Impossibile inviare il messaggio, controlla i permessi del bot.**");
         await channel.send({ embeds: [errorEmbed] });
     }
 }
@@ -109,7 +109,7 @@ function initializePlayer(client) {
                 `- **Autore:** ${track.info.author || 'Artista sconosciuto'}\n` +
                 `- **Durata:** ${formatDuration(track.info.length)}\n` +
                 `- **Richiesta:** ${requester}\n` +
-                `- **Fonte:** ${track.info.sourceName}\n` + '**- Controlli :**\n 🔁 `Ripeti`, ❌ `Disattiva`, ⏭️ `Salta`, 🎤 `Lyrics`, 🗑️ `Pulisci`\n ⏹️ `Arresta`, ⏸️ `Pausa`, ▶️ `Continua`, 🔊 `Vol +`, 🔉 `Vol -`')
+                `- **Fonte:** ${track.info.sourceName}\n` + '**- Controlli :**\n 🔁 `Ripeti`, ❌ `Disattiva`, ⏭️ `Salta`, 🎤 `Testo`, 🗑️ `Pulisci`\n ⏹️ `Arresta`, ⏸️ `Pausa`, ▶️ `Continua`, 🔊 `Vol +`, 🔉 `Vol -`')
             .setImage('attachment://musicard.png')
             .setColor('#FF7A00');
 
@@ -133,10 +133,10 @@ function initializePlayer(client) {
             }
 
         } catch (error) {
-            console.error("Error creating or sending music card:", error.message);
+            console.error("Errore durante la creazione o l'invio della scheda musicale:", error.message);
             const errorEmbed = new EmbedBuilder()
                 .setColor('#FF0000')
-                .setDescription("⚠️ **Unable to load track card. Continuing playback...**");
+                .setDescription("⚠️ **Impossibile caricare la scheda traccia. Riproduzione in corso...**");
             await channel.send({ embeds: [errorEmbed] });
         }
     });
@@ -162,19 +162,19 @@ function initializePlayer(client) {
                 if (!nextTrack) {
                     await cleanupTrackMessages(client, player);
                     player.destroy();
-                    await channel.send("⚠️ **No more tracks to autoplay. Disconnecting...**");
+                    await channel.send("⚠️ **Non ci sono più tracce da riprodurre automaticamente, disconnessione in corso...**");
                 }
             } else {
                 await cleanupTrackMessages(client, player);
-                console.log(`Autoplay is disabled for guild: ${guildId}`);
+                console.log(`La riproduzione automatica è disabilitata per il guild:: ${guildId}`);
                 player.destroy();
-                await channel.send("🎶 **Queue has ended. Autoplay is disabled.**");
+                await channel.send("🎶 **La coda è terminata. La riproduzione automatica è disattivata.**");
             }
         } catch (error) {
-            console.error("Error handling autoplay:", error);
+            console.error("Errore durante la gestione della riproduzione automatica:", error);
             await cleanupTrackMessages(client, player);
             player.destroy();
-            await channel.send("👾**Queue Empty! Disconnecting...**");
+            await channel.send("👾 **La coda è vuota! Disconnessione...**");
         }
     });
 }
@@ -192,7 +192,7 @@ async function cleanupPreviousTrackMessages(channel, guildId) {
                 }
             }
         } catch (error) {
-            console.error("Error cleaning up previous track message:", error);
+            console.error("Errore durante la pulizia del messaggio della traccia precedente:", error);
         }
     }
 
@@ -215,7 +215,7 @@ async function cleanupTrackMessages(client, player) {
                 }
             }
         } catch (error) {
-            console.error("Error cleaning up track message:", error);
+            console.error("Errore durante la pulizia della traccia:", error);
         }
     }
 
@@ -253,7 +253,7 @@ function setupCollector(client, player, channel, message) {
         if (!voiceChannel || voiceChannel.id !== playerChannel) {
             const vcEmbed = new EmbedBuilder()
                 .setColor(config.embedColor)
-                .setDescription('🔒 **You need to be in the same voice channel to use the controls!**');
+                .setDescription('🔒 **Devi essere connesso sullo stesso canale per utilizzare i controlli**');
             const sentMessage = await channel.send({ embeds: [vcEmbed] });
             setTimeout(() => sentMessage.delete().catch(console.error), config.embedTimeout * 1000);
             return;
@@ -276,7 +276,7 @@ async function handleInteraction(i, player, channel) {
             break;
         case 'skipTrack':
             player.stop();
-            await sendEmbed(channel, "⏭️ **Player will play the next song!**");
+            await sendEmbed(channel, "⏭️ **Il lettore riprodurrà la canzone successiva!**");
             break;
         case 'disableLoop':
             disableLoop(player, channel);
@@ -286,27 +286,27 @@ async function handleInteraction(i, player, channel) {
             break;
         case 'clearQueue':
             player.queue.clear();
-            await sendEmbed(channel, "🗑️ **Queue has been cleared!**");
+            await sendEmbed(channel, "🗑️ **La coda è stata cancellata!**");
             break;
         case 'stopTrack':
             player.stop();
             player.destroy();
-            await sendEmbed(channel, '⏹️ **Playback has been stopped and player destroyed!**');
+            await sendEmbed(channel, '⏹️ **La riproduzione è stata interrotta e il lettore è stato distrutto!**');
             break;
         case 'pauseTrack':
             if (player.paused) {
-                await sendEmbed(channel, '⏸️ **Playback is already paused!**');
+                await sendEmbed(channel, '⏸️ **La riproduzione è già in pausa!**');
             } else {
                 player.pause(true);
-                await sendEmbed(channel, '⏸️ **Playback has been paused!**');
+                await sendEmbed(channel, '⏸️ **La riproduzione è stata messa in pausa!**');
             }
             break;
         case 'resumeTrack':
             if (!player.paused) {
-                await sendEmbed(channel, '▶️ **Playback is already resumed!**');
+                await sendEmbed(channel, '▶️ **La riproduzione è già ripresa!**');
             } else {
                 player.pause(false);
-                await sendEmbed(channel, '▶️ **Playback has been resumed!**');
+                await sendEmbed(channel, '▶️ **La riproduzione è ripresa!**');
             }
             break;
         case 'volumeUp':
@@ -327,22 +327,22 @@ async function sendEmbed(channel, message) {
 function adjustVolume(player, channel, amount) {
     const newVolume = Math.min(100, Math.max(10, player.volume + amount));
     if (newVolume === player.volume) {
-        sendEmbed(channel, amount > 0 ? '🔊 **Volume is already at maximum!**' : '🔉 **Volume is already at minimum!**');
+        sendEmbed(channel, amount > 0 ? '🔊 **Il volume è già al massimo!**' : '🔉 **Il volume è già al minimo!**');
     } else {
         player.setVolume(newVolume);
-        sendEmbed(channel, `🔊 **Volume changed to ${newVolume}%!**`);
+        sendEmbed(channel, `🔊 **Volume cambiato a ${newVolume}%!**`);
     }
 }
 
 
 function toggleLoop(player, channel) {
     player.setLoop(player.loop === "track" ? "queue" : "track");
-    sendEmbed(channel, player.loop === "track" ? "🔁 **Track loop is activated!**" : "🔁 **Queue loop is activated!**");
+    sendEmbed(channel, player.loop === "track" ? "🔁 **Il loop della traccia è attivato!**" : "🔁 **Il loop di coda è attivato!**");
 }
 
 function disableLoop(player, channel) {
     player.setLoop("none");
-    sendEmbed(channel, "❌ **Loop is disabled!**");
+    sendEmbed(channel, "❌ **Il loop è disabilitato!**");
 }
 
 
@@ -392,7 +392,7 @@ async function getLyrics(trackName, artistName, duration) {
 
 async function showLyrics(channel, player) {
     if (!player || !player.current || !player.current.info) {
-        sendEmbed(channel, "🚫 **No song is currently playing.**");
+        sendEmbed(channel, "🚫 **Nessun brano in riproduzione.**");
         return;
     }
 
@@ -400,7 +400,7 @@ async function showLyrics(channel, player) {
     const lyrics = await getLyrics(track.title, track.author, Math.floor(track.length / 1000));
 
     if (!lyrics) {
-        sendEmbed(channel, "❌ **Lyrics not found!**");
+        sendEmbed(channel, "❌ **Testo non trovato.**");
         return;
     }
 
