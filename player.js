@@ -383,7 +383,7 @@ async function getLyrics(trackName, artistName, duration) {
 
         return response.data.syncedLyrics || response.data.plainLyrics;
     } catch (error) {
-        console.error("❌ Lyrics fetch error:", error.response?.data?.message || error.message);
+        console.error("❌ Errore nel recupero dei testi:", error.response?.data?.message || error.message);
         return null;
     }
 }
@@ -410,7 +410,7 @@ async function showLyrics(channel, player) {
 
     const embed = new EmbedBuilder()
         .setTitle(`🎵 Live Lyrics: ${track.title}`)
-        .setDescription("🔄 Syncing lyrics...")
+        .setDescription("🔄 Sincronizzazione dei testi...")
         .setColor(config.embedColor);
 
     const stopButton = new ButtonBuilder()
