@@ -73,18 +73,18 @@ async function createPlaylist(client, interaction, lang) {
 
 module.exports = {
     name: 'createplaylist',
-    description: 'Create a new playlist',
+    description: 'Crea una nuova playlist',
     permissions: '0x0000000000000800',
     options: [
         {
             name: 'name',
-            description: 'Enter playlist name',
+            description: 'Inserisci il nome della playlist',
             type: ApplicationCommandOptionType.String,
             required: true
         },
         {
             name: 'private',
-            description: 'Set playlist as private (visible only to you)',
+            description: 'Imposta la playlist come privata (visibile solo a te)',
             type: ApplicationCommandOptionType.Boolean,
             required: true
         }
