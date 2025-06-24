@@ -142,7 +142,7 @@ async function playCustomPlaylist(client, interaction, lang) {
 
 module.exports = {
     name: 'playcustomplaylist',
-    description: 'Play a custom playlist',
+    description: 'Riproduci una playlist personalizzata',
     permissions: '0x0000000000000800',
     options: [
         {
